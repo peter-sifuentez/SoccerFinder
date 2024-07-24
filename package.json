@@ -1,0 +1,15 @@
+{
+  "name": "soccerfinder",
+  "version": "1.0.0",
+  "description": "A google assistant app that locates nearby soccer parks and there conditions",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Sifuentez",
+  "license": "ISC",
+  "dependencies": {
+    "@adidas/yarn-design-system": "^1.5.5",
+    "bootstrap": "^4.4.1"
+  }
+}
