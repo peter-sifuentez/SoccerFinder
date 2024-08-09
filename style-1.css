@@ -1,0 +1,137 @@
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.welcome {
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+
+.field-2 {
+  overflow-x: hidden;
+}
+
+.home-inner {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.navbar-brand img {
+  height: 2rem;
+}
+
+.navbar-nav li {
+  padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding-top: .8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #FF0000;
+}
+
+/*.home-inner {
+  background-image: url(./img/field.jpg);
+  background-repeat: no-repeat;
+}*/
+
+/*Headliner*/
+
+.row-1{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slide {
+  flex: 30%;
+  padding: 20px;
+}
+
+.fakimg {
+  width: 100%;
+  padding: 20px;
+}
+
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 38%;
+  z-index: 1;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.caption h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+  padding-bottom: 1rem;
+}
+
+.caption h3 {
+  font-size: 2rem;
+  text-shadow: .1rem .1rem .5rem black;
+  padding-bottom: 1.6rem;
+}
+
+.jumbotron {
+  padding-top:
+}
+
+#map {
+  height: 600px;
+  width: 100%;
+}
+
+.icon {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.icon-2 {
+  padding: 1rem;
+}
+
+
+
+
+.fa-futbol, .fa-mobile, .fa-male {
+  font-size: 4em;
+  margin: 1rem;
+  color: #ff270d;
+}
+
+footer {
+  background-color: #40474e;
+  color: #fff;
+  padding: 2rem 0 2rem;
+  margin-top: 1rem;
+}
