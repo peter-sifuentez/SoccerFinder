@@ -1,0 +1,51 @@
+@import '~bootstrap/less/scaffolding';
+@import '~bootstrap/less/type';
+@import '~bootstrap/less/normalize';
+@import '~bootstrap/less/utilities';
+
+//
+// Scaffolding
+// --------------------------------------------------
+
+@-ms-viewport {
+  width: auto !important;
+}
+
+html {
+  background-color: @body-bg;
+  color: @text-color;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: fade(@primary-black, 0);
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  @media screen and (min-width: @screen-sm) {
+    height: 100%;
+  }
+
+  @media screen and (max-width: @screen-sm) {
+    overflow-y: auto;
+    -ms-overflow-style: scrollbar;
+  }
+}
+
+body {
+  font-size: inherit;
+  margin: inherit;
+  padding: inherit;
+  height: inherit;
+  overflow: hidden;
+}
+
+.page-container {
+  @media screen and (min-width: @screen-sm) {
+    height: 100%;
+    .flex(column);
+  }
+}

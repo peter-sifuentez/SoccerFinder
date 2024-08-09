@@ -1,0 +1,70 @@
+.toolbar {
+  @defaultTop: @navbar-height - @toolbar-height;
+  @lateral-right-closed: 100%;
+  @toolbar-button-padding: @padding-large-horizontal / 2;
+
+  background-color: @primary-white;
+  border-bottom: 1px solid @primary-lightgray;
+  color: @primary-darkgray;
+  height: @toolbar-height;
+  flex: 0 0 auto;
+  .flex(row, center, space-between);
+
+  @media screen and (max-width: @screen-xs-max) {
+    width: 100%;
+    position: fixed;
+    top: @header-height;
+    z-index: @zindex-navbar-fixed;
+  }
+
+  &__title {
+    color: @primary-nickel;
+    padding-left: @padding-large-horizontal;
+    .font-family-heading-bold();
+  }
+
+  &__left,
+  &__right {
+    .flex(row);
+  }
+
+  &__left {
+    justify-content: flex-start;
+  }
+
+  &__right {
+    justify-content: flex-end;
+  }
+
+  &__vertical-divider {
+    display: inline-block;
+    width: 1px;
+    height: @toolbar-height;
+    border-left: 1px solid @primary-lightgray;
+  }
+
+  &__slider {
+    height: @toolbar-height;
+    .position(fixed, @navbar-height, @toolbar-height);
+    .flex();
+
+    &.closed {
+      .transform(transform, translateX(@lateral-right-closed));
+    }
+
+    &.open {
+      .transform(transform, translateX(0));
+    }
+  }
+
+  &--desktop {
+    .flex(row, center, space-between);
+    .hidden-xs();
+  }
+
+  &--mobile {
+    height: @toolbar-height;
+    .position(fixed, @navbar-height, 0, null, 0);
+    .visible-xs();
+  }
+}

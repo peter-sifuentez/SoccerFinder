@@ -1,0 +1,111 @@
+.sidebar {
+  @top-position: @navbar-height + @toolbar-height;
+  @input-btn-size: 2em;
+  @half-padding-horizontal: floor(@padding-base-horizontal / 2);
+  @input-separator-width: 1em;
+  @button-padding-icon: @padding-large-horizontal / 2;
+  @tag-height: 2em;
+
+  background-color: @primary-white;
+  border-right: 1px solid @primary-lightgray;
+  padding: @sidebar-padding-vertical @sidebar-padding-horizontal;
+  margin-left: 0;
+  width: @sidebar-width;
+  height: 100%;
+  min-height: 1px;
+  overflow-y: auto;
+  .transform(margin-left);
+
+  @media screen and (min-width: @screen-xs-max) {
+    flex: 0 0 auto;
+    flex-basis: @sidebar-width;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    width: @sidebar-width-mobile;
+    max-height: calc(100% ~'-' (@header-height + @toolbar-height));
+    display: block;
+    position: fixed;
+    z-index: @zindex-sidebar;
+  }
+
+  &.closed {
+    @media screen and (min-width: @screen-xs-max) {
+      margin-left: -@sidebar-width;
+    }
+
+    @media screen and (max-width: @screen-xs-max) {
+      margin-left: -@sidebar-width-mobile;
+      .transform(unset);
+    }
+  }
+
+  &.open {
+    margin-left: 0;
+  }
+
+  &__header {
+    font-size: @font-size-small;
+    .font-family-base-regular();
+    .flex(row, center, space-between);
+
+    @media screen and (max-width: @screen-xs-max) {
+      padding-top: @font-size-base / 2;
+    }
+  }
+
+  &__main {
+    .font-family-base-regular();
+
+    .list-group {
+      .list-group-item {
+        .item-wrapper {
+          .flex(row, center, flex-start);
+
+          .yarn-icon {
+            font-size: @font-size-h5;
+            margin-right: @button-padding-icon / 2;
+          }
+        }
+      }
+    }
+
+    .sidebar__sorting-list__element {
+      border-bottom: 1px solid @primary-lightgray;
+      padding: @font-size-base / 2;
+      .flex(row, center, flex-start);
+
+      &__order,
+      &__title,
+      &__check {
+        order: 0;
+        align-self: auto;
+      }
+
+      &__order {
+        flex: 0 1 auto;
+      }
+
+      &__title {
+        flex: 1 1 auto;
+      }
+
+      &__check {
+        flex: 0 1 auto;
+      }
+    }
+
+    @media screen and (max-width: @screen-xs-max) {
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    color: @primary-darkgray;
+    font-size: @font-size-small;
+
+    .clearfix();
+    .text-uppercase();
+    .font-family-base-regular();
+  }
+}

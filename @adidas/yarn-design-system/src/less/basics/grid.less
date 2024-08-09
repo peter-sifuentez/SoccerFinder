@@ -1,0 +1,61 @@
+@import '~bootstrap/less/grid';
+
+.main {
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+
+  @media screen and (min-width: @screen-xs-max) {
+    flex: 1 1 auto;
+    .flex(row);
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    padding-top: @header-height + @toolbar-height;
+  }
+}
+
+.container {
+  background-color: @primary-white;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: scrollbar;
+
+  &-fluid,
+  &-fluid--mobile {
+    .container-fixed(@custom-gutter);
+  }
+
+  &-fluid--mobile {
+    @media screen and (max-width: @screen-xs-max) {
+      .container-fixed(@custom-gutter-mobile);
+    }
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    display: block;
+  }
+
+  .section {
+    border-bottom: 1px solid @primary-lightgray;
+    padding: @padding-large-vertical;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .row {
+    margin: 0;
+
+    .section {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
